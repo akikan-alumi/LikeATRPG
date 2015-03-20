@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.0
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.kadaiUnity4.CSharp.Plugins", "UnityVS.kadaiUnity4.CSharp.Plugins.csproj", "{783681B5-2E5B-7B07-7620-1E26610C7D4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnityVS.kadaiUnity4.CSharp", "UnityVS.kadaiUnity4.CSharp.csproj", "{DFC1AB47-0CA2-DBBC-CCDE-3F556550360A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{783681B5-2E5B-7B07-7620-1E26610C7D4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{783681B5-2E5B-7B07-7620-1E26610C7D4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{783681B5-2E5B-7B07-7620-1E26610C7D4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{783681B5-2E5B-7B07-7620-1E26610C7D4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFC1AB47-0CA2-DBBC-CCDE-3F556550360A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFC1AB47-0CA2-DBBC-CCDE-3F556550360A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFC1AB47-0CA2-DBBC-CCDE-3F556550360A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFC1AB47-0CA2-DBBC-CCDE-3F556550360A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

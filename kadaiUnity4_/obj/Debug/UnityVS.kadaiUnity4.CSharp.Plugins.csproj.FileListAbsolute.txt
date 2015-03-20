@@ -1,0 +1,11 @@
+C:\Users\akikan\Documents\kadaiUnity4\Temp\UnityVS_bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\akikan\Documents\kadaiUnity4\Temp\UnityVS_bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\akikan\Documents\kadaiUnity4\Temp\UnityVS_bin\Debug\UnityEditor.dll
+C:\Users\akikan\Documents\kadaiUnity4\Temp\UnityVS_bin\Debug\UnityEngine.dll
+C:\Users\akikan\Documents\kadaiUnity4\Temp\UnityVS_bin\Debug\UnityEngine.UI.dll
+C:\Users\akikan\Documents\kadaiUnity4\Temp\UnityVS_bin\Debug\UnityEngine.xml
+C:\Users\akikan\Documents\kadaiUnity4\Temp\UnityVS_bin\Debug\UnityEditor.xml
+C:\Users\akikan\Documents\kadaiUnity4\Temp\UnityVS_bin\Debug\UnityEngine.UI.xml
+C:\Users\akikan\Documents\kadaiUnity4\obj\Debug\UnityVS.kadaiUnity4.CSharp.Plugins.csprojResolveAssemblyReference.cache
+C:\Users\akikan\Documents\kadaiUnity4\obj\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\akikan\Documents\kadaiUnity4\obj\Debug\Assembly-CSharp-firstpass.pdb
