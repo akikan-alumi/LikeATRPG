@@ -13,7 +13,9 @@ public class trace : MonoBehaviour {
     public Camera mainCamera;//かめらの位置取得用
 
     private float negativeMargin = 0;
-    private float positiveMargin = 1;
+    private float positiveMargin = 1f;
+    private float marginX = 1280;
+    private float marginY = 720;
     // Use this for initialization
     void Start() {
         // 開始位置を画面中心辺りにする        
@@ -27,25 +29,30 @@ public class trace : MonoBehaviour {
         if (Input.GetMouseButtonDown(0)) {
             // クリックした画面から半直線(ray)を生成
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             if (isOutOfScreen(ray.origin)) {
                 // 半直線にヒットした情報をhit変数に格納
                 Physics.Raycast(ray, out hit);
                 hitVec3 = new Vector3(hit.point.x, hit.point.y + 0.5f, hit.point.z);
+                print("真");
+                print(transform.position);
             } else {
-
+                print("偽");
+                print(transform.position);
+                //hitVec3 = this.transform.position;
             }
         }
         // 位置を更新し続ける
-        iTween.MoveUpdate(gameObject, hitVec3, 2.0f);
+        iTween.MoveUpdate(gameObject, hitVec3, 0.1f);
     }
 
     private bool isOutOfScreen(Vector3 vec3) {
 
         if (vec3.x <= negativeMargin ||//フィールドが表示されている部分
-            vec3.x >= positiveMargin ||
+            vec3.x >= marginY ||
             vec3.y <= negativeMargin ||
-            vec3.y >= positiveMargin) {
+            vec3.y >= marginX) {
             return true;
         }else{
             return false;
