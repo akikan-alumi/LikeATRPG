@@ -60,6 +60,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CameraSpace.cs" />
     <Compile Include="Assets\test_iTween.cs" />
     <Compile Include="Assets\trace.cs" />
   </ItemGroup>
