@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-
 public class trace : MonoBehaviour {
     // 開始位置のオブジェクト
     private RaycastHit hit;
@@ -22,6 +21,7 @@ public class trace : MonoBehaviour {
         hit.point = normalVec3;
         this.transform.position = normalVec3;
         hitVec3 = normalVec3;
+        //testdll.MyClass.message();
     }
 
     // Update is called once per frame
