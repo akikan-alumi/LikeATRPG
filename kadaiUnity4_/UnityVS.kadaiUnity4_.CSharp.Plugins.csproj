@@ -52,6 +52,9 @@
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>Assets\System.Windows.Forms.dll</HintPath>
+    </Reference>
     <Reference Include="testdll">
       <HintPath>Assets\testdll.dll</HintPath>
     </Reference>
