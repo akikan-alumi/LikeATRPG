@@ -5,17 +5,20 @@ using UnityEditor;
 /// unityの公式にあるUnityScriptでのOpenFilePanelのクラスをがんばってC#にした。
 /// 最初はstartにどちらも入れていたのだが、どうやら20行目あたりにあるreturn文が悪さをするので
 /// AwakeとStartの2つに分けた。
-/// 03/30追記
+/// h27/03/30追記
 /// Start廃止してchangeTextureに変更
+/// h27/0426追記
+/// そもそもの並び方を変更
+/// なぜAwakeでインスタンス生成しないとエラーでるし
 /// 参考URL：http://docs.unity3d.com/ja/current/ScriptReference/EditorUtility.OpenFilePanel.html
 /// </summary>
 public class test : MonoBehaviour {
-    public Texture2D tx;
-    public GameObject texture;
+    public Texture2D texture2D;
+    public GameObject textureGameObject;
     void Awake() {
-        tx = Selection.activeObject as Texture2D;
+        /*ここでインスタンス生成しないとエラーが出る。*/
+        texture2D = Selection.activeObject as Texture2D;
     }
-	// Use this for initialization
 	public void changeTexture () {
         
         var path = EditorUtility.OpenFilePanel(
@@ -24,16 +27,16 @@ public class test : MonoBehaviour {
             "jpg");
         if (path.Length != 0) {
             var www = new WWW("file:///" + path);
-            tx = www.textureNonReadable;
-            Sprite spriteTexture = Sprite.Create(tx ,new Rect(0,0,255,255),Vector2.zero);
-            texture.GetComponent<SpriteRenderer>().sprite = spriteTexture;
+            texture2D = www.textureNonReadable;
+            Sprite spriteTexture = Sprite.Create(texture2D ,new Rect(0,0,255,255),Vector2.zero);
+            textureGameObject.GetComponent<SpriteRenderer>().sprite = spriteTexture;
         }
-        if (tx == null) {
+        if (texture2D == null) {
             EditorUtility.DisplayDialog(
-                "SelectTexture",
-                "テクスチャが設定されてません",
-                "OK");
-            return;
+                "SelectTexture",//タイトルバー
+                "テクスチャが設定されてません",//本文
+                "OK"//ボタン
+                );
         }
 	}
 }
