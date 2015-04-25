@@ -29,22 +29,19 @@ public class CameraSpace : MonoBehaviour {
     /// カメラを左に移動させる
     /// </summary>
     public void iTweenLeftMove() {
-        var hash = hashAdd(MoveCamera);
-        iTween.MoveTo(mainCamGameObject, hash);
+        hashAdd(MoveCamera); 
     }
     /// <summary>
     /// iTweenRightMove
     /// カメラを右に移動させる
     /// </summary>
     public void iTweenRightMove() {
-        var hash = hashAdd(-MoveCamera);
-        iTween.MoveTo(mainCamGameObject, hash);
+         hashAdd(-MoveCamera);
     }
 
     /// <summary>
     /// hashadd
     /// カメラの移動方向や移動速度のメソッド
-    /// あくまで結果だけ返す
     /// 
     /// h27/04/26
     /// hashtableとか使ってみたけどこれ使いやすいのかねぇ？
@@ -52,13 +49,13 @@ public class CameraSpace : MonoBehaviour {
     /// </summary>
     /// <param name="ArgumentX"></param>
     /// <returns></returns>
-    private Hashtable hashAdd(float ArgumentX) {
+    private void hashAdd(float ArgumentX) {
         var hash = new Hashtable() {
             {"speed", speed},
             {"x", mainCamGameObject.transform.localPosition.x-ArgumentX},
             {"y", cameraY},
             {"easyType",iTween.EaseType.linear},
         };
-        return hash;
+        iTween.MoveTo(mainCamGameObject, hash);
     }
 }
