@@ -10,19 +10,10 @@ using UnityEditor;
 /// 参考URL：http://docs.unity3d.com/ja/current/ScriptReference/EditorUtility.OpenFilePanel.html
 /// </summary>
 public class test : MonoBehaviour {
-    private EditorUtility eu;
     public Texture2D tx;
     public GameObject texture;
     void Awake() {
-        eu = new EditorUtility();
         tx = Selection.activeObject as Texture2D;
-        if (tx == null) {
-            EditorUtility.DisplayDialog(
-                "SelectTexture",
-                "テクスチャが設定されてません",
-                "OK");
-            return;
-        }
     }
 	// Use this for initialization
 	public void changeTexture () {
@@ -37,10 +28,12 @@ public class test : MonoBehaviour {
             Sprite spriteTexture = Sprite.Create(tx ,new Rect(0,0,255,255),Vector2.zero);
             texture.GetComponent<SpriteRenderer>().sprite = spriteTexture;
         }
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+        if (tx == null) {
+            EditorUtility.DisplayDialog(
+                "SelectTexture",
+                "テクスチャが設定されてません",
+                "OK");
+            return;
+        }
 	}
 }
