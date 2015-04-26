@@ -66,8 +66,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\CameraSpace.cs" />
+    <Compile Include="Assets\Script\inputTexture.cs" />
     <Compile Include="Assets\Script\stageCreate.cs" />
-    <Compile Include="Assets\Script\test.cs" />
     <Compile Include="Assets\Script\trace.cs" />
     <Compile Include="Assets\test_iTween.cs" />
   </ItemGroup>
